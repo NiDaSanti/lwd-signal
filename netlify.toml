@@ -1,0 +1,14 @@
+[build]
+  base = "."
+  publish = "dashboard/dist"
+  command = "npm run build --prefix dashboard"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[dev]
+  command = "npm run dev --prefix dashboard"
+  targetPort = 5173
+  publish = "dashboard/dist"
+  functions = "netlify/functions"
